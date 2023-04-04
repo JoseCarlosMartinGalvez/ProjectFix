@@ -43,15 +43,19 @@ namespace Factorial
             {
                 sum += numbers[i];
             }
-            return sum;
+            float average = sum / numbers.Count;
+            return average;
         }
         public static ulong factorial_recursive(ulong n)
         {
-            if (n < 1)
+            if (n == 0 || n == 1)
             {
-                return factorial_recursive(n - 1);
+                return 1;
             }
-            return n * factorial_recursive(n - 1);
+            else
+            {
+                return n * factorial_recursive(n - 1);
+            }
         }
         public static ulong factorial_for(ulong n)
         {

@@ -28,8 +28,19 @@ namespace DayOfTheWeek
         }
         public static int DayOfTheWeek(int year, int month, int day)
         {
-            //TODO
-            return -1;
+            if (month < 3)
+            {
+                month += 12;
+                year -= 1;
+            }
+            int century = year / 100;
+            int yearInCentury = year % 100;
+            int dayOfWeek = (day + 13 * (month + 1) / 5 + yearInCentury + yearInCentury / 4 + century / 4 - 2 * century) % 7;
+            if (dayOfWeek < 0)
+            {
+                dayOfWeek += 7;
+            }
+            return dayOfWeek; ;
         }
     }
 }

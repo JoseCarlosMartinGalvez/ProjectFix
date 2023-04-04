@@ -18,7 +18,9 @@ namespace DNI
         /// <returns></returns>
         public static char LetterNIF(int number)
         {
-            return '-';
+            Console.WriteLine("Write your DNI/NIF letter");
+            char Letter= char.Parse(Console.ReadLine());
+            return Letter;
         }
     }
 }
