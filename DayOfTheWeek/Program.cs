@@ -31,16 +31,12 @@ namespace DayOfTheWeek
             if (month < 3)
             {
                 month += 12;
-                year -= 1;
+                year--;
             }
-            int century = year / 100;
-            int yearInCentury = year % 100;
-            int dayOfWeek = (day + 13 * (month + 1) / 5 + yearInCentury + yearInCentury / 4 + century / 4 - 2 * century) % 7;
-            if (dayOfWeek < 0)
-            {
-                dayOfWeek += 7;
-            }
-            return dayOfWeek; ;
+
+            int DayWeek = (day + 13 * (month + 1) / 5 + year + year / 4 - year / 100 + year / 400) % 7;
+
+            return (DayWeek + 6) % 7;
         }
     }
 }

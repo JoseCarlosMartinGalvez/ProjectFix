@@ -15,7 +15,7 @@ namespace DNI
         /// This 
         /// </summary>
         /// <param name="number"></param>
-        /// <returns></returns>
+        /// <returns> Letter </returns>
         public static char LetterNIF(int number)
         {
             Console.WriteLine("Write your DNI/NIF letter");

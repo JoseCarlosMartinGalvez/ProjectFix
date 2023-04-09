@@ -25,6 +25,7 @@ namespace Sorting
 
         static public List<int> Sort(List<int> list)
         {
+            list.Sort((a, b) => a - b);  
             return list;
         }
     }
